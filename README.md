@@ -11,5 +11,4 @@ pip install --upgrade pip setuptools wheel
 ## Dev
 ```shell
 pip install pre-commit
-
 ```
