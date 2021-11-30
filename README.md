@@ -9,6 +9,8 @@ pip install --upgrade pip setuptools wheel
 ```
 
 ## Dev
+Update all the revs to the latest versions
+
 ```shell
 pip install pre-commit
 ```
