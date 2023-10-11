@@ -1,2 +1,48 @@
-[tool.isort]
-line_length = 120
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mypackage" # TODO: replace
+description = "..." # TODO: replace
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Philip Tovstogan", email = "phil.tgun@gmail.com" },
+] # TODO: replace
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+dynamic = ["version"]
+
+dependencies = [
+    # pin dependencies to specific version for better management
+]
+
+[project.optional-dependencies]
+dev = [
+    # code quality
+    "black",
+    "ruff",
+    "pre-commit",
+    "mypy",
+]
+test = ["pytest", "pytest-mock", "coverage"]
+
+
+[tool.hatch.version]
+path = "mypackage/__init__.py" # TODO: replace
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+
+[tool.coverage.run]
+parallel = true
+
+[[tool.mypy.overrides]]
+module = []
+ignore_missing_imports = true
